@@ -1,17 +1,18 @@
 import pandas as pd
-import os
 
-files = [
-    "data/raw/hdfc_top100_nav.csv",
-    "data/raw/sbi_bluechip_nav.csv",
-    "data/raw/icici_bluechip_nav.csv",
-    "data/raw/axis_bluechip_nav.csv",
-    "data/raw/kotak_bluechip_nav.csv",
-    "data/raw/nippon_largecap_nav.csv"
-]
+fund_master = pd.read_csv("data/raw/01_fund_master.csv")
+nav_history = pd.read_csv("data/raw/02_nav_history.csv")
 
-for file in files:
-    df = pd.read_csv(file)
-    print("\nFile:", os.path.basename(file))
-    print("Columns:", df.columns.tolist())
-    print("Rows:", len(df))
+fund_codes = set(fund_master["amfi_code"])
+nav_codes = set(nav_history["amfi_code"])
+
+missing_codes = fund_codes - nav_codes
+
+print("Fund Master Codes:", len(fund_codes))
+print("NAV History Codes:", len(nav_codes))
+
+if len(missing_codes) == 0:
+    print("\nPASS: All AMFI codes exist in nav_history")
+else:
+    print("\nMissing Codes:")
+    print(missing_codes)

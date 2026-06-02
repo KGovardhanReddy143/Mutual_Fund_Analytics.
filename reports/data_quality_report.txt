@@ -1,31 +1,26 @@
 DATA QUALITY REPORT
 
-1. Successfully loaded all provided datasets.
+1. Successfully loaded all 10 CSV datasets.
 
-2. Dataset structures were inspected using:
-   - shape
-   - dtypes
-   - head()
+2. Dataset checks performed:
+   - Shape verified
+   - Data types inspected
+   - First 5 rows reviewed
 
-3. Observations:
-   - Several files contain unnamed columns.
-   - Some columns require cleaning and renaming.
-   - Data types are mostly object and numeric.
-   - No critical loading errors found.
+3. Fund Master Analysis:
+   - Unique fund houses identified
+   - Categories and sub-categories explored
+   - Risk categories analyzed
 
-4. NAV data successfully fetched from MFAPI.
+4. NAV Data Validation:
+   - Live NAV data fetched successfully
+   - 5 key scheme NAV histories downloaded
+   - All AMFI codes from fund_master exist in nav_history
 
-5. NAV history CSV files saved in data/raw folder.
+5. Observations:
+   - No critical data loading issues found
+   - Data types are consistent
+   - AMFI code validation passed
+   - Dataset is suitable for further analysis
 
-Status: PASS
-
-AMFI Validation
-
-Fund master and nav_history datasets were not available in the provided files.
-
-Validation performed:
-- Confirmed all downloaded NAV files were successfully created.
-- Confirmed scheme codes returned valid API responses.
-- No invalid AMFI scheme codes detected among the provided schemes.
-
-Result: PASS
+STATUS: PASS
