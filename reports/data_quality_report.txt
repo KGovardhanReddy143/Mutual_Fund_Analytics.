@@ -1,1 +1,31 @@
-Data Quality Report
+DATA QUALITY REPORT
+
+1. Successfully loaded all provided datasets.
+
+2. Dataset structures were inspected using:
+   - shape
+   - dtypes
+   - head()
+
+3. Observations:
+   - Several files contain unnamed columns.
+   - Some columns require cleaning and renaming.
+   - Data types are mostly object and numeric.
+   - No critical loading errors found.
+
+4. NAV data successfully fetched from MFAPI.
+
+5. NAV history CSV files saved in data/raw folder.
+
+Status: PASS
+
+AMFI Validation
+
+Fund master and nav_history datasets were not available in the provided files.
+
+Validation performed:
+- Confirmed all downloaded NAV files were successfully created.
+- Confirmed scheme codes returned valid API responses.
+- No invalid AMFI scheme codes detected among the provided schemes.
+
+Result: PASS
