@@ -1,64 +1,100 @@
-# Mutual Fund Analytics
+# Mutual Fund Analytics Dashboard
 
 ## Project Overview
 
-This project focuses on Mutual Fund Data Analytics. The objective is to ingest, validate, and analyze mutual fund datasets for further reporting and dashboard development.
+This project analyzes mutual fund performance, investor behavior, and investment trends using Python, SQL, SQLite, and Power BI. The objective is to generate actionable insights from mutual fund data and build an interactive dashboard for decision-making.
 
-## Day 1 Tasks Completed
+## Tools & Technologies
 
-### Project Setup
+* Python (Pandas, NumPy, Matplotlib)
+* SQL
+* SQLite
+* Power BI
+* Git & GitHub
 
-* Created project folder structure
-* Initialized Git repository
-* Pushed project to GitHub
-* Created requirements.txt
+## Dataset
 
-### Data Ingestion
+The project uses mutual fund datasets containing:
 
-* Loaded 10 mutual fund datasets using Pandas
-* Checked dataset shape, data types, and sample records
-* Identified basic data anomalies
+* Fund performance metrics
+* NAV history
+* Investor transactions
+* Scheme information
 
-### Live NAV Fetch
+## Project Workflow
 
-* Fetched live NAV data from MFAPI
-* Saved NAV history as CSV files
-* Retrieved NAV data for multiple mutual fund schemes
+1. Data Collection and Loading
+2. Data Cleaning and Preprocessing
+3. Exploratory Data Analysis (EDA)
+4. SQL-Based Analysis
+5. Dashboard Development in Power BI
+6. Reporting and Visualization
 
-### Fund Master Exploration
+## Dashboard Pages
 
-* Analyzed unique fund houses
-* Analyzed categories and sub-categories
-* Reviewed risk categories
-* Studied AMFI scheme code structure
+### 1. Industry Overview Dashboard
 
-### Data Validation
+* Total AUM
+* Total Schemes
+* Total Investors
+* Total Investment Amount
+* Top Fund Houses
+* NAV Trend Over Time
 
-* Validated AMFI codes between fund_master and nav_history datasets
-* Confirmed all AMFI codes exist in NAV history
-* Generated data quality report
+### 2. Fund Performance Dashboard
 
-## Technologies Used
+* Risk vs Return Analysis
+* Fund Performance Scorecard
+* NAV Trend by Fund
+* Fund Category Analysis
 
-* Python
-* Pandas
-* NumPy
-* Requests
-* Matplotlib
-* Seaborn
-* Plotly
-* SQLAlchemy
+### 3. Investor Analytics Dashboard
+
+* Investment Amount by State
+* Transaction Type Distribution
+* Average Investment by Age Group
+* Yearly Investment Trend
+
+### 4. SIP & Market Trends Dashboard
+
+* Yearly Investment Trend
+* Category-Wise Investment Distribution
+* Top Categories by Investment
+* Fund House Filters
+
+## Key Insights
+
+* Large Cap funds attracted the highest investment amount.
+* Lumpsum transactions contributed the largest share of investments.
+* Significant variation exists between risk levels and fund returns.
+* Investment trends changed across years and fund categories.
+* Certain states contributed a larger share of total investments.
 
 ## Project Structure
 
-* data/raw
-* data/processed
-* scripts
-* reports
-* notebooks
-* sql
-* dashboard
+```text
+Mutual_Fund_Analytics/
+│
+├── data/
+├── notebooks/
+├── sql/
+├── reports/
+├── dashboard/
+│   ├── page1.png
+│   ├── page2.png
+│   ├── page3.png
+│   └── page4.png
+│
+├── bluestock_mf.db
+├── Bluestock_Mutual_Fund_Analysis.pbix
+├── README.md
+└── requirements.txt
+```
 
-## Status
+## Author
 
-Day 1: Data Ingestion Complete
+Govardhan Reddy
+
+## GitHub Repository
+
+Portfolio project developed for Data Analyst and Business Analyst career preparation.
